@@ -120,7 +120,6 @@ body {
 @media (max-width: 767px) {
   .content {
     height: fit-content;
-    padding: 20px 0;
   }
   .stat {
     flex-direction: column;
@@ -128,7 +127,6 @@ body {
   }
   .stat table {
     width: 100%;
-    overflow-x: auto;
   }
   .stat table td,
   .stat table th {
