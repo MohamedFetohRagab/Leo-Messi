@@ -70,6 +70,7 @@ body {
 }
 .content img:hover {
   transform: scale(1.1);
+  border: 2px solid #ddd;
 }
 .content .info {
   background-color: rgba(92, 129, 147, 0.5);
@@ -109,6 +110,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  padding: 0;
 }
 .stat ul li {
   font-size: 35px;
@@ -123,6 +125,7 @@ body {
   }
   .stat {
     flex-direction: column;
+    padding: 0 15px;
     justify-content: center;
   }
   .stat table {
@@ -137,6 +140,5 @@ body {
     justify-content: center;
     gap: 20px;
     width: 100%;
-    padding: 0;
   }
 }
