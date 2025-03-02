@@ -86,6 +86,12 @@ nav ul a {
   display: block;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  nav ul a {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
 nav ul a::before {
   content: "";
   position: absolute;
@@ -104,7 +110,7 @@ nav ul a:hover::before {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #ddd;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   z-index: 1;
   padding: 50px 0;
@@ -236,9 +242,15 @@ nav ul a:hover::before {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 50px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 .Records .box {
   color: white;
+  background-color: var(--p-background);
+  padding: 10px 20px;
+  border-radius: 10px;
+  flex: 1;
 }
 .Records .box h3 {
   margin-bottom: 20px;
@@ -315,10 +327,15 @@ nav ul a:hover::before {
   color: #ddd;
 }
 .Individual ul {
-  list-style-type: none;
+  list-style-type: circle;
   max-width: 1000px;
   padding: 0;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .Individual ul {
+    text-align: center;
+  }
 }
 .Individual ul li {
   padding: 10px 0;
@@ -331,13 +348,15 @@ nav ul a:hover::before {
   background-image: url(../imgs/background-4.jpg);
   z-index: 1;
   background-size: cover;
+  overflow: hidden;
 }
 .stat table {
   border: 2px solid gray;
-  width: 700px;
+  max-width: calc(100% - 30px);
   margin: 0 auto 50px;
   font-size: 20px;
   color: white;
+  background-color: #dddddd27;
 }
 .stat table th {
   border-bottom: 2px solid gray;
@@ -348,11 +367,7 @@ nav ul a:hover::before {
   padding: 15px;
   border: 1px solid gray;
 }
-@media (max-width: 767px) {
-  .stat table {
-    width: 90%;
-  }
-}
+
 .stat ul {
   list-style-type: none;
   padding: 0;
