@@ -9,6 +9,7 @@ body {
 }
 :root {
   --p-background: rgba(92, 129, 147, 0.68);
+  --section: rgba(92, 129, 147, 0.4);
 }
 h2.main-title {
   width: fit-content;
@@ -166,10 +167,10 @@ nav ul a:hover::before {
 @keyframes imageborder {
   100%,
   0% {
-    border: 2px solid red;
+    border: 3px solid red;
   }
   50% {
-    border: 2px solid blue;
+    border: 3px solid blue;
   }
 }
 .landing img:hover {
@@ -192,17 +193,28 @@ nav ul a:hover::before {
 }
 
 .journey {
-  background-image: url(../imgs/background-4.jpg);
-  background-size: cover;
+  /* background-image: url(../imgs/background-4.jpg); */
+  /* background-size: cover; */
+  background-color: var(--section);
+  color: black;
   position: relative;
   padding: 50px 0;
   z-index: 1;
+}
+.journey .main-title {
+  color: black;
 }
 .journey .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+}
+.journey .main-title::after {
+  background-color: var(--p-background);
+}
+.journey .main-title::before {
+  background-color: var(--p-background);
 }
 .journey .info {
   display: flex;
@@ -215,14 +227,16 @@ nav ul a:hover::before {
 }
 .journey .info img {
   max-width: 100%;
+  border-radius: 6px;
 }
 .journey .info p {
-  background-color: var(--p-background);
-  color: #ddd;
-  padding: 10px;
+  color: black;
+  padding: 15px;
   width: 100%;
   margin: 0;
   border-radius: 6px;
+  text-align: center;
+  box-shadow: 0px 0px 9px 0px gray;
 }
 @media (max-width: 767px) {
   .journey .info {
@@ -252,10 +266,10 @@ nav ul a:hover::before {
   border-radius: 10px;
   flex: 1;
   text-align: center;
-  box-shadow: 0px 0px 9px 0px #ddd;
+  box-shadow: 0px 0px 9px 0px gray;
 }
 .Records .box h3 {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .Records .box ul {
   padding: 0;
@@ -320,19 +334,22 @@ nav ul a:hover::before {
 }
 
 .Individual {
-  /* background-image: url(../imgs/background-5.jpg); */
-  background-size: cover;
-  background-image: url(../imgs/background-4.jpg);
+  border-top: 2px solid white;
+  background-color: var(--section);
   position: relative;
   z-index: 1;
   min-height: 100vh;
   padding: 50px 0;
-  color: #ddd;
+  color: black;
 }
-.Individual ul {
-  max-width: 1000px;
-  /* padding: 0; */
-  margin: 0 auto;
+.Individual .main-title::after {
+  background-color: var(--p-background);
+}
+.Individual .main-title::before {
+  background-color: var(--p-background);
+}
+.Individual .main-title {
+  color: black;
 }
 @media (max-width: 767px) {
   .Individual ul {
@@ -348,6 +365,7 @@ nav ul a:hover::before {
   min-height: 80dvh;
   padding: 50px 0;
   border-bottom: 2px solid #fff;
+  border-top: 2px solid #fff;
 }
 .video::before {
   content: "";
@@ -376,10 +394,23 @@ nav ul a:hover::before {
   text-transform: uppercase;
 }
 .video p {
-  max-width: 500px;
   width: 320px;
 }
-
+@media (max-width: 767px) {
+  .video {
+    padding: 0;
+  }
+  .video .text {
+    position: relative;
+    transform: translate(0);
+    color: black;
+    top: 0;
+    left: 0;
+  }
+  .video p {
+    width: fit-content;
+  }
+}
 .stat {
   position: relative;
   padding: 50px 0 10px;
@@ -388,6 +419,12 @@ nav ul a:hover::before {
 }
 .stat .main-title {
   color: black;
+}
+.stat .main-title::after {
+  background-color: var(--p-background);
+}
+.stat .main-title::before {
+  background-color: var(--p-background);
 }
 .stat table {
   border: 2px solid gray;
@@ -431,4 +468,10 @@ nav ul a:hover::before {
   margin: 50px auto 0;
   border-top: 4px solid gray;
   color: black;
+}
+#Contact .main-title::after {
+  background-color: var(--p-background);
+}
+#Contact .main-title::before {
+  background-color: var(--p-background);
 }
