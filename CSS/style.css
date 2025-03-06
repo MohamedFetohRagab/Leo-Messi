@@ -432,11 +432,13 @@ nav ul a:hover::before {
   margin: 0 auto 50px;
   font-size: 20px;
   color: inherit;
-  box-shadow: 0px 0px 10px 0.2px gray;
+  width: 60%;
+  box-shadow: 0px 0px 5px 2px gray;
 }
 @media (max-width: 767px) {
   .stat table {
     font-size: 14px;
+    width: 95%;
   }
 }
 .stat table th {
